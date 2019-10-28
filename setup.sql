@@ -2,7 +2,7 @@ CREATE DATABASE users;
 use users;
 CREATE TABLE admin (username VARCHAR(255) NOT NULL UNIQUE, password VARCHAR(255) not null);
 CREATE TABLE complaints (location VARCHAR(255), message TEXT);
-CREATE TABLE doors (name VARCHAR(255) NOT NULL UNIQUE, location VARCHAR(255) NOT NULL, latitude DECIMAL(10, 8) NOT NULL, longitude DECIMAL(11, 8) NOT NULL, key VARCHAR(255) NOT NULL UNIQUE);
+CREATE TABLE doors (name VARCHAR(255) NOT NULL UNIQUE, location VARCHAR(255) NOT NULL, latitude DECIMAL(10, 8) NOT NULL, longitude DECIMAL(11, 8) NOT NULL, key VARCHAR(255) NOT NULL UNIQUE, mac VARCHAR(255) NOT NULL UNIQUE);
 CREATE TABLE students (RCSid VARCHAR(255) NOT NULL UNIQUE, Password VARCHAR(255) NOT NULL, Status varchar(255) NOT NULL);
 CREATE USER 'developer'@'localhost' IDENTIFIED BY 'developer';
 GRANT ALL PRIVELEGES IN *.* TO 'developer'@'localhost' IDENTIFIED BY 'developer';
