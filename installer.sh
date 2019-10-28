@@ -27,6 +27,7 @@ sudo -u www-data cp dist/*/* /var/www/html
 cd ..
 sudo -u www-data cp AutoDoorCtrlWebAPIPHP/.htaccess /var/www/html
 sudo -u www-data cp -r AutoDoorCtrlWebAPIPHP/api /var/www/html
+sudo service apache2 restart
 sudo mysql < ./setup.sql
 
 echo admin1/admin1pass
