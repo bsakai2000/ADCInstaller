@@ -1,4 +1,11 @@
-172c172
-< 	AllowOverride None
----
-> 	AllowOverride All
+--- apache2.old	2019-10-28 18:28:42.217637047 -0400
++++ apache2.conf	2019-10-28 18:27:56.474250643 -0400
+@@ -169,7 +169,7 @@
+ 
+ <Directory /var/www/>
+ 	Options Indexes FollowSymLinks
+-	AllowOverride None
++	AllowOverride All
+ 	Require all granted
+ </Directory>
+ 
