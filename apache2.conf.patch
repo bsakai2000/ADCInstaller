@@ -1,0 +1,4 @@
+172c172
+< 	AllowOverride None
+---
+> 	AllowOverride All
