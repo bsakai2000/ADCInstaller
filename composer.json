@@ -1,0 +1,13 @@
+{
+    "name": "bsakai2000/keygen",
+    "require": {
+        "paragonie/constant_time_encoding": "^2.2"
+    },
+    "authors": [
+        {
+            "name": "Brandon Sakai",
+            "email": "brandon.sakai@gmail.com"
+        }
+    ]
+}
+
