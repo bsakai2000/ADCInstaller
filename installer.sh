@@ -13,6 +13,7 @@ sudo -u www-data openssl rsa -in /var/www/keys/adminPrivate.key -outform PEM -pu
 sudo -u www-data openssl rsa -in /var/www/keys/userPrivate.key -outform PEM -pubout -out /var/www/keys/userPublic.key
 sudo a2enmod rewrite
 sudo patch /etc/apache2/apache2.conf ./apache2.conf.patch
+sudo rm /var/www/html/index.html
 git clone https://github.com/AutomaticDoorControl/AutoDoorCtrlWebAPIPHP.git
 cd AutoDoorCtrlWebAPIPHP/api
 composer install
@@ -20,7 +21,7 @@ cd ../..
 git clone https://github.com/AutomaticDoorControl/AutoDoorCtrlWeb.git
 cd AutoDoorCtrlWeb
 npm i
-sed -i "s/https:\/\/rpiadc.com/http:\/\/$(ip addr | grep -oP "(\d{1,3}\.){3}\d{1,3}" | grep -vP "255$|127\.0\.0\.1" | head -n1)/" ./src/app/globals.ts
+sed -i "s/https:\/\/rpiadc.com/http:\/\/$(ip addr | grep -oP "(\d{1,3}\.){3}\d{1,3}" | grep -vP "255$|127\.0\.0\.1" | tail -n1)/" ./src/app/globals.ts
 sudo npm install -g @angular/cli
 ng build --prod
 sudo -u www-data cp dist/*/* /var/www/html
