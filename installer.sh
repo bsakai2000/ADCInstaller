@@ -1,4 +1,4 @@
-set -exo pipefail
+set -euxo pipefail
 
 #install dependencies
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
@@ -45,3 +45,8 @@ sudo -u www-data cp -r AutoDoorCtrlWebAPIPHP/api /var/www/html
 sudo service apache2 restart
 #setup the SQL database
 sudo mysql < ./setup.sql
+#generate and add doors to database
+chmod +x addDoor.sh
+composer install
+./addDoor.sh D1 "Door One" 42.726979 -73.677847 | sudo mysql
+./addDoor.sh D2 "Door Two" 42.731463 -73.678025 | sudo mysql

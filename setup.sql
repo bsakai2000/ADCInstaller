@@ -9,4 +9,3 @@ GRANT ALL PRIVILEGES ON *.* TO 'developer'@'localhost' IDENTIFIED BY 'developer'
 INSERT INTO admin (username, password) VALUES ("admin1", "$2y$10$CUoclxcmP3gLnRy00N.tdOHAihRx/VYD50u2eGyGbvMp61FYqQG5q"), ("admin2", "$2y$10$XqcO4zlTtB5F9gKYBKbthObqMJwtE48pnV.HIGlA/sDNK4BYtOe1K");
 INSERT INTO students (RCSid, Password, Status) VALUES ("user1", "$2y$10$9AxuNZcQhKbjoHIHWFN59OlyvXwyyU5q3BI1b77KtqLiny2Yf2dDa", "Active"), ("user2", "$2y$10$tItI1vGDKH1qJTeh3O3WYegS3FFvLqoLn6p1m0HoBXStgtHjgSEKu", "Request");
 INSERT INTO complaints (location, message) VALUES ("loc1", "this is message1"), ("location2", "message the second");
-INSERT INTO doors (name, location, latitude, longitude, `key`, mac) VALUES ("D1", "Door One", 42.726979, -73.677847, "C2V4IHKGVCJJOM7JY3P5ZLL73VKOCMG4JPPKSPZN3MJMOVSOCNHQ", "65:B5:9B:60:E7:7F"), ("D2", "Door Two", 42.731463, -73.678025, "MHAZCT3HVLU7PKHNPMFUOTLRHVKVJZCT36ZVHRTQZUQOHXOBIXYQ", "9D:21:48:3F:3F:46");
