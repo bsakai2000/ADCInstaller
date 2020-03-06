@@ -80,7 +80,7 @@ then
 fi
 
 # Generate first part of statement with required variables
-echo 'use users;'
+echo 'use ADC;'
 echo -n 'INSERT INTO doors (name, location, latitude, longitude, mac, `key`) VALUES ('
 echo -n "\"$1\", \"$2\", \"$3\", \"$4\", "
 
