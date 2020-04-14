@@ -3,7 +3,7 @@ set -euxo pipefail
 #install dependencies
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 sudo apt install curl
-curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt install -y apache2 mysql-server php php-mysql php-mbstring composer make g++ nodejs zip
 
 #enable apache2 rewritemod
